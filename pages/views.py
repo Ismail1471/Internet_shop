@@ -10,7 +10,7 @@ def shop_view(request):
     categories = Category.objects.all()
     main_categories = MainCategory.objects.all()
     products = Product.objects.all()
-    paginator = Paginator(products, 2)
+    paginator = Paginator(products, 1)
     number = request.GET.get('page')
     page_obj = paginator.get_page(number)
     context = {
